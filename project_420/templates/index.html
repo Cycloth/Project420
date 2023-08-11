@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="mt-4 mb-4">Project 420 Flower Review Form</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="mt-4 mb-4">
+        <label for="first_name">First Name:</label>
+        <input class="form-control" type="text" id="first_name" name="first_name" required>
+    </div>
+    <div class="form-group mb-4">
+        <label for="email">Email:</label>
+        <input class="form-control" type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group mb-4">
+        <label for="date">Purchase Date</label>
+        <input class="form-control" type="date" id="date" name="date" required>
+    </div>
+    <div class="form-group mb-4">
+        <label>Flower Base: </label>
+        <br>
+        <div class="btn-group-vertical" id="strain_base">
+            <input class="btn-check form-check-input" type="radio" id="sativa" name="strain_base" value="sativa" required>
+            <label class="btn btn-outline-secondary" for="sativa">Sativa</label>
+
+            <input class="btn-check form-check-input" type="radio" id="sativa_hybrid" name="strain_base" value="sativa_hybrid" required>
+            <label class="btn btn-outline-secondary" for="sativa_hybrid">Sativa-Hybrid</label>
+
+            <input class="btn-check form-check-input" type="radio" id="indica_hybrid" name="strain_base" value="indica_hybrid" required>
+            <label class="btn btn-outline-secondary" for="indica_hybrid">Indica-Hybrid</label>
+
+            <input class="btn-check form-check-input" type="radio" id="indica" name="strain_base" value="indica" required>
+            <label class="btn btn-outline-secondary" for="indica">Indica</label>
+        </div>
+        <div class="mt-4 mb-4">
+        <label for="strain_name">Strain Name:</label>
+        <input class="form-control" type="text" id="strain_name" name="strain_name" required>
+    </div>
+    </div>
+    <button class="btn btn-secondary mb-4" type="submit">Submit</button>
+    {% if messages %}
+    <div class="alert alert-success">
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    </div>
+    {% endif %}
+</form>
+{% endblock %}
