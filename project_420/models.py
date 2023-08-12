@@ -7,7 +7,7 @@ class Form(models.Model):
     email = models.EmailField()
     date = models.DateField()
     strain_name = models.CharField(max_length=80)
-    strain_base = models.CharField(max_length=80)
+    strain_THC = models.CharField(max_length=80)
     strain_id = models.CharField(max_length=80)
     grow_info = models.CharField(max_length=500)
     flower_color = models.CharField(max_length=80)

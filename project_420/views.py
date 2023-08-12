@@ -14,7 +14,7 @@ def index(request):
             email = form.cleaned_data["email"]
             date = form.cleaned_data["date"]
             strain_name = form.cleaned_data["strain_name"]
-            strain_base = form.cleaned_data["strain_base"]
+            strain_THC = form.cleaned_data["strain_base"]
             strain_id = form.cleaned_data["strain_id"]
             grow_info = form.cleaned_data["grow_info"]
             flower_color = form.cleaned_data["flower_color"]
@@ -32,7 +32,7 @@ def index(request):
 
             Form.objects.create(first_name=first_name, last_name=last_name,
                                 email=email, date=date, strain_name=strain_name,
-                                strain_base=strain_base, strain_id=strain_id,
+                                strain_THC=strain_THC, strain_id=strain_id,
                                 flower_color=flower_color, flower_color2=flower_color2,
                                 flower_texture=flower_texture, flower_density=flower_density,
                                 flower_flavor=flower_flavor, flower_flavor2=flower_flavor2,

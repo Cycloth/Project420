@@ -7,7 +7,7 @@ class ApplicationForm(forms.Form):
     email = forms.EmailField()
     date = forms.DateField()
     strain_name = (forms.CharField(max_length=80))
-    strain_base = (forms.CharField(max_length=80))
+    strain_THC = (forms.CharField(max_length=80))
     strain_id = (forms.CharField(max_length=80))
     grow_info = (forms.CharField(max_length=500))
     flower_color = (forms.CharField(max_length=80))

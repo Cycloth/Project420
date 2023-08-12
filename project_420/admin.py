@@ -3,10 +3,10 @@ from.models import Form
 
 
 class FormAdmin(admin.ModelAdmin):
-    list_display = ("date", "strain_name", "grow_info", "strain_base", "strain_id", "flower_effect3", "user_rating", "flower_flavor", "flower_effect", "user_notes")
-    search_fields = ("date", "strain_name", "grow_info", "strain_base", "strain_id", "user_rating", "user_notes", "first_name", "last_name", "email")
-    list_filter = ("strain_name", "strain_id", "strain_base", "user_rating", "flower_effect")
-    ordering = ("strain_name", "strain_base", "strain_id", "user_rating")
+    list_display = ("date", "strain_name", "grow_info", "strain_THC", "strain_id", "flower_effect3", "user_rating", "flower_flavor", "flower_effect", "user_notes")
+    search_fields = ("date", "strain_name", "grow_info", "strain_THC", "strain_id", "user_rating", "user_notes", "first_name", "last_name", "email")
+    list_filter = ("strain_name", "strain_id", "strain_THC", "user_rating", "flower_effect")
+    ordering = ("strain_name", "strain_THC", "strain_id", "user_rating")
     readonly_fields = ()
 
 
