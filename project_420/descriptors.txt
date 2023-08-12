@@ -1,0 +1,34 @@
+creativity, depression, anxiety
+energy, stress, euphoria
+happiness, fatigue, pain
+pain, stress, anxiety
+socializing, relaxation, energy
+relaxation, stress, euphoria
+relaxation, anxiety, pain
+stress, pain, anxiety
+pain, insomnia, relaxation
+appetite, pain, insomnia
+relaxation, happiness, stress
+stress, anxiety
+happiness, creativity, relaxation
+focus, stress
+relaxation, euphoria, happiness
+
+Strain Name	Strain Type	THC	CBD	Helps with
+Sour Diesel	sativa	18%	less than 1%	creativity, depression, anxiety
+Green Crack	sativa	17%	less than 1%	energy, stress, euphoria
+Lemon Haze	sativa	18%	less than 1%	happiness, fatigue, pain
+Charlotte's Web	sativa	less than 1%	13%	pain, stress, anxiety
+Candyland	sativa	18%	less than 1%	socializing, relaxation, energy
+Purple Punch	indica	19%	less than 1%	relaxation, stress, euphoria
+Pennywise	indica	8%	8%	relaxation, anxiety, pain
+Northern Lights	indica	16%	less than 1%	stress, pain, anxiety
+GMO Cookies	indica	25%	less than 1%	pain, insomnia, relaxation
+Bubba Kush	indica	17%	less than 1%	appetite, pain, insomnia
+GG4	hybrid	20%	less than 1%	relaxation, happiness, stress
+Sour Tsunami	hybrid	less than 1%	12%	pain, stress, anxiety
+Sherbert	hybrid	18%	less than 1%	happiness, creativity, relaxation
+Cannatonic	hybrid	5%	10%	pain, focus, stress
+Blue Dream	hybrid	18%	less than 1%	relaxation, euphoria, happiness
+
+
