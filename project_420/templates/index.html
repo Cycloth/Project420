@@ -1,12 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1 class="mt-4 mb-4">Project 420 Flower Review Form</h1>
-<h3 class="mt-3 mb-4">Please don't abuse this form, this is for research purposes. Please only enter valid information.</h3>
+<div
+  class="bg-image"
+  style="
+    background-image: url('https://drive.google.com/file/d/1yNRxjhq0rEK5rTwpH7uZo-tB-_Iu0L05/view?usp=sharing');
+    height: 100vh;
+  "
+>
+<h6>Version 1.0</h6>
+<h1 class="mt-4 mb-4">Project420 - Flower Review Form -</h1>
+<h4 class="mt-3 mb-4">Please don't abuse this form, this is for research purposes. Please only enter valid information.</h4>
     <form method="post">
-        {% csrf_token %}
+    {% csrf_token %}
         <div class="mt-4 mb-4">
-            <label for="first_name">First Name / Alias:  (Leave Blank if you would like to remain Anonymous)</label>
+            <label for="first_name">First Name      / Please use an Alias if you would like to remain Anonymous </label>
             <input class="form-control" type="text" id="first_name" name="first_name" required>
+            <label for="last_name">Last Name</label>
+            <input class="form-control" type="text" id="last_name" name="last_name" required>
         </div>
         <div class="form-group mb-4">
             <label for="email">Enter an Email address to subscribe to our mailing list for updates on the project! </label>
@@ -17,29 +27,46 @@
             <input class="form-control" type="date" id="date" name="date" required>
         </div>
         <div class="mt-4 mb-4">
-            <label for="strain_name">Strain Name:     REQUIRED</label>
+            <label for="strain_name">Strain Name:</label>
             <input class="form-control" type="text" id="strain_name" name="strain_name" required>
         </div>
         <div class="mt-4 mb-4">
-            <label for="strain_name">Grower Information</label>
+            <label for="grow_info">Grower Information</label>
             <input class="form-control" type="text" id="grow_info" name="grow_info" required>
         </div>
-        <h5 class="mt-3 mb-4">Only 1 response is allowed per section</h5>
-        <h6 class="mt-3 mb-4">General Overview of flower:</h6>
+        <h5 class="mt-3 mb-4">Only 1 response is allowed per section:</h5>
         <div class="form-group mb-4">
             <label>Strain Type:</label>
-            <div class="btn-group-horizontal" id="strain_base">
-                <input class="btn-check form-check-input" type="radio" id="sativa" name="strain_base" value="sativa" required>
+            <div class="btn-group-horizontal" id="strain_id">
+                <input class="btn-check form-check-input" type="radio" id="sativa" name="strain_id" value="sativa" required>
                 <label class="btn btn-outline-secondary" for="sativa">Sativa</label>
 
-                <input class="btn-check form-check-input" type="radio" id="sativa_hybrid" name="strain_base" value="sativa_hybrid" required>
+                <input class="btn-check form-check-input" type="radio" id="sativa_hybrid" name="strain_id" value="sativa_hybrid" required>
                 <label class="btn btn-outline-secondary" for="sativa_hybrid">Sativa-Hybrid</label>
 
-                <input class="btn-check form-check-input" type="radio" id="indica_hybrid" name="strain_base" value="indica_hybrid" required>
+                <input class="btn-check form-check-input" type="radio" id="indica_hybrid" name="strain_id" value="indica_hybrid" required>
                 <label class="btn btn-outline-secondary" for="indica_hybrid">Indica-Hybrid</label>
 
-                <input class="btn-check form-check-input" type="radio" id="indica" name="strain_base" value="indica" required>
+                <input class="btn-check form-check-input" type="radio" id="indica" name="strain_id" value="indica" required>
                 <label class="btn btn-outline-secondary" for="indica">Indica</label>
+            </div>
+        </div>
+         <div class="form-group mb-4">
+            <label>THC Level:</label>
+            <div class="btn-group-horizontal" id="strain_base">
+                <input class="btn-check form-check-input" type="radio" id="20_less" name="strain_base" value="20_less" required>
+                <label class="btn btn-outline-secondary" for="20_less">20 or Less</label>
+
+                <input class="btn-check form-check-input" type="radio" id="21_25" name="strain_base" value="21_25" required>
+                <label class="btn btn-outline-secondary" for="21_25">21-25</label>
+
+                <input class="btn-check form-check-input" type="radio" id="26_30" name="strain_base" value="26_30" required>
+                <label class="btn btn-outline-secondary" for="26_30">26-30</label>
+
+                <input class="btn-check form-check-input" type="radio" id="31_34" name="strain_base" value="31_34" required>
+                <label class="btn btn-outline-secondary" for="31_34">31-34</label>
+                <input class="btn-check form-check-input" type="radio" id="35_plus" name="strain_base" value="35_plus" required>
+                <label class="btn btn-outline-secondary" for="35_plus">35 Plus</label>
             </div>
         </div>
         <div class="form-group mb-4">
@@ -63,8 +90,8 @@
                 <input class="btn-check form-check-input" type="radio" id="gold" name="flower_color" value="gold" required>
                 <label class="btn btn-outline-secondary" for="gold">Gold</label>
 
-                <input class="btn-check form-check-input" type="radio" id="purple" name="flower_color" value="purple" required>
-                <label class="btn btn-outline-secondary" for="purple">Purple</label>
+                <input class="btn-check form-check-input" type="radio" id="purple_base" name="flower_color" value="purple_base" required>
+                <label class="btn btn-outline-secondary" for="purple_base">Purple</label>
             </div>
         <div class="form-group mb-4"> <br>
             <label>Flower Accent(s):</label><br>
@@ -74,11 +101,13 @@
 
                 <input class="btn-check form-check-input" type="radio" id="hairs" name="flower_color2" value="hairs" required>
                 <label class="btn btn-outline-secondary" for="hairs">Hairs</label>
+
+                <input class="btn-check form-check-input" type="radio" id="purple_accent" name="flower_color2" value="purple_accent" required>
+                <label class="btn btn-outline-secondary" for="purple_accent">Purple</label>
             </div>
         </div>
-            <h6 class="mt-3 mb-4">Visual Appearance of flower:</h6>
             <div class="form-group mb-4">
-                <label>Physical Characteristics:</label>
+                <label>Visual Appearance of Flower:</label>
                 <div class="btn-group-horizontal" id="flower_texture">
                 <input class="btn-check form-check-input" type="radio" id="dense" name="flower_texture" value="dense" required>
                 <label class="btn btn-outline-secondary" for="dense">Solid tight</label>
@@ -93,7 +122,9 @@
                 <label class="btn btn-outline-secondary" for="crumbly">Crumbly</label>
             </div>
         </div>
-            <div class="btn-group-horizontal" id="flower_density">
+            <div class="form-group mb-4">
+                <label>Feel of Flower:</label>
+                <div class="btn-group-horizontal" id="flower_density">
                 <input class="btn-check form-check-input" type="radio" id="tight_dense" name="flower_density" value="tight_dense" required>
                 <label class="btn btn-outline-secondary" for="tight_dense">Tight Dense</label>
 
@@ -107,7 +138,7 @@
                 <label class="btn btn-outline-secondary" for="flaky">Crumbly/Flaky</label>
         </div>
             <div class="form-group mb-4"><br>
-                <label>Scent in jar/packaging:</label>
+                <label>How did it smell when opened:</label>
                 <div class="btn-group-horizontal" id="flower_aroma">
                 <input class="btn-check form-check-input" type="radio" id="citrus_smell" name="flower_aroma" value="citrus_smell" required>
                 <label class="btn btn-outline-secondary" for="citrus_smell">Citrus</label>
@@ -120,24 +151,42 @@
 
                 <input class="btn-check form-check-input" type="radio" id="skunky_smell" name="flower_aroma" value="skunky_smell" required>
                 <label class="btn btn-outline-secondary" for="skunky_smell">Skunky</label>
+
+                <input class="btn-check form-check-input" type="radio" id="sour" name="flower_aroma" value="sour" required>
+                <label class="btn btn-outline-secondary" for="sour">Sour</label>
+
+                <input class="btn-check form-check-input" type="radio" id="cat_piss" name="flower_aroma" value="cat_piss" required>
+                <label class="btn btn-outline-secondary" for="cat_piss">Cat Piss</label>
+
+                <input class="btn-check form-check-input" type="radio" id="fertilizer" name="flower_aroma" value="fertilizer" required>
+                <label class="btn btn-outline-secondary" for="fertilizer">Fertilizer</label>
         </div><br>
             <div class="form-group mb-4">
                 <label>Initial taste when smoked:</label>
                 <div class="btn-group-horizontal" id="flower_flavor">
-                    <input class="btn-check form-check-input" type="radio" id="citrus" name="flower_flavor" value="citrus" required>
-                    <label class="btn btn-outline-secondary" for="citrus">Citrus</label>
+                <input class="btn-check form-check-input" type="radio" id="citrus" name="flower_flavor" value="citrus" required>
+                <label class="btn btn-outline-secondary" for="citrus">Citrus</label>
 
-                    <input class="btn-check form-check-input" type="radio" id="pine" name="flower_flavor" value="pine" required>
-                    <label class="btn btn-outline-secondary" for="pine">Pine</label>
+                <input class="btn-check form-check-input" type="radio" id="pine" name="flower_flavor" value="pine" required>
+                <label class="btn btn-outline-secondary" for="pine">Pine</label>
 
-                    <input class="btn-check form-check-input" type="radio" id="earthy" name="flower_flavor" value="earthy" required>
-                    <label class="btn btn-outline-secondary" for="earthy">Earthy</label>
+                <input class="btn-check form-check-input" type="radio" id="earthy" name="flower_flavor" value="earthy" required>
+                <label class="btn btn-outline-secondary" for="earthy">Earthy</label>
 
-                    <input class="btn-check form-check-input" type="radio" id="skunky" name="flower_flavor" value="skunky" required>
-                    <label class="btn btn-outline-secondary" for="skunky">Skunky</label>
+                <input class="btn-check form-check-input" type="radio" id="skunky" name="flower_flavor" value="skunky" required>
+                <label class="btn btn-outline-secondary" for="skunky">Skunky</label>
+
+                <input class="btn-check form-check-input" type="radio" id="sour_taste" name="flower_flavor" value="sour_taste" required>
+                <label class="btn btn-outline-secondary" for="sour_taste">Sour</label>
+
+                <input class="btn-check form-check-input" type="radio" id="cat_piss_taste" name="flower_flavor" value="cat_piss_taste" required>
+                <label class="btn btn-outline-secondary" for="cat_piss_taste">Cat Piss</label>
+
+                <input class="btn-check form-check-input" type="radio" id="fertilizer_taste" name="flower_flavor" value="fertilizer_taste" required>
+                <label class="btn btn-outline-secondary" for="fertilizer_taste">Fertilizer</label>
         </div><br>
             <div class="form-group mb-4">
-                <label>Underlying taste when smoked:</label>
+                <label>Aftertaste when smoked:</label>
                 <div class="btn-group-horizontal" id="flower_flavor2">
                     <input class="btn-check form-check-input" type="radio" id="citrus2" name="flower_flavor2" value="citrus2" required>
                     <label class="btn btn-outline-secondary" for="citrus2">Citrus</label>
@@ -152,32 +201,80 @@
                     <label class="btn btn-outline-secondary" for="skunky2">Skunky</label>
         </div><br>
             <div class="form-group mb-4">
-                    <label>How did you feel after consumption?:</label>
+                    <label>How did you feel after? (Select 1 from each section):</label>
                     <div class="btn-group-horizontal" id="flower_effect">
-                        <input class="btn-check form-check-input" type="radio" id="happy" name="flower_effect" value="happy" required>
-                        <label class="btn btn-outline-secondary" for="happy">Happy</label>
+                    <input class="btn-check form-check-input" type="radio" id="happy" name="flower_effect" value="happy" required>
+                    <label class="btn btn-outline-secondary" for="happy">Happy</label>
 
-                        <input class="btn-check form-check-input" type="radio" id="energy" name="flower_effect" value="energy" required>
-                        <label class="btn btn-outline-secondary" for="energy">Energetic</label>
+                    <input class="btn-check form-check-input" type="radio" id="energy" name="flower_effect" value="energy" required>
+                    <label class="btn btn-outline-secondary" for="energy">Energetic</label>
 
-                        <input class="btn-check form-check-input" type="radio" id="dizzy" name="flower_effect" value="dizzy" required>
-                        <label class="btn btn-outline-secondary" for="dizzy">Dizzy</label>
+                    <input class="btn-check form-check-input" type="radio" id="dizzy" name="flower_effect" value="dizzy" required>
+                    <label class="btn btn-outline-secondary" for="dizzy">Dizzy</label>
 
-                        <input class="btn-check form-check-input" type="radio" id="couch_lock" name="flower_effect" value="couch_lock" required>
-                        <label class="btn btn-outline-secondary" for="couch_lock">Couch Lock</label>
-        </div><br>
-            <div class="btn-group-horizontal" id="flower_effect2">
-                    <input class="btn-check form-check-input" type="radio" id="sleep" name="flower_effect2" value="sleep" required>
+                    <input class="btn-check form-check-input" type="radio" id="hungry" name="flower_effect" value="hungry" required>
+                    <label class="btn btn-outline-secondary" for="hungry">Hungry</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="sleep" name="flower_effect" value="sleep" required>
                     <label class="btn btn-outline-secondary" for="sleep">Sleepy</label>
 
-                        <input class="btn-check form-check-input" type="radio" id="quiet" name="flower_effect2" value="quiet" required>
-                        <label class="btn btn-outline-secondary" for="quiet">Quiet</label>
+                    <input class="btn-check form-check-input" type="radio" id="relaxed" name="flower_effect" value="relaxed" required>
+                    <label class="btn btn-outline-secondary" for="relaxed">Relaxed</label>
 
-                        <input class="btn-check form-check-input" type="radio" id="busy" name="flower_effect2" value="busy" required>
-                        <label class="btn btn-outline-secondary" for="busy">Busy</label>
+                    <input class="btn-check form-check-input" type="radio" id="busy" name="flower_effect" value="busy" required>
+                    <label class="btn btn-outline-secondary" for="busy">Busy</label>
 
-                        <input class="btn-check form-check-input" type="radio" id="curious" name="flower_effect2" value="curious" required>
-                        <label class="btn btn-outline-secondary" for="curious">Curious</label>
+                    <input class="btn-check form-check-input" type="radio" id="curious" name="flower_effect" value="curious" required>
+                    <label class="btn btn-outline-secondary" for="curious">Curious</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="focused" name="flower_effect" value="focused" required>
+                    <label class="btn btn-outline-secondary" for="focused">Focused</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="dry_mouth" name="flower_effect" value="dry_mouth" required>
+                    <label class="btn btn-outline-secondary" for="dry_mouth">Dry Mouth</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="dry_eyes" name="flower_effect" value="dry_eyes" required>
+                    <label class="btn btn-outline-secondary" for="dry_eyes">Dry Eyes</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="paranoid" name="flower_effect" value="paranoid" required>
+                    <label class="btn btn-outline-secondary" for="paranoid">Paranoid</label>
+        </div><hr>
+            <div class="btn-group-horizontal" id="flower_effect2">
+                    <input class="btn-check form-check-input" type="radio" id="happy_eff2" name="flower_effect2" value="happy_eff2" required>
+                    <label class="btn btn-outline-secondary" for="happy_eff2">Happy</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="energy_eff2" name="flower_effect2" value="energy_eff2" required>
+                    <label class="btn btn-outline-secondary" for="energy_eff2">Energetic</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="dizzy_eff2" name="flower_effect2" value="dizzy_eff2" required>
+                    <label class="btn btn-outline-secondary" for="dizzy_eff2">Dizzy</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="hungry_eff2" name="flower_effect2" value="hungry_eff2" required>
+                    <label class="btn btn-outline-secondary" for="hungry_eff2">Hungry</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="sleep_eff2" name="flower_effect2" value="sleep_eff2" required>
+                    <label class="btn btn-outline-secondary" for="sleep_eff2">Sleepy</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="relaxed2" name="flower_effect2" value="relaxed2" required>
+                    <label class="btn btn-outline-secondary" for="relaxed2">Relaxed</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="busy2" name="flower_effect2" value="busy2" required>
+                    <label class="btn btn-outline-secondary" for="busy2">Busy</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="curious2" name="flower_effect2" value="curious2" required>
+                    <label class="btn btn-outline-secondary" for="curious2">Curious</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="focused2" name="flower_effect2" value="focused2" required>
+                    <label class="btn btn-outline-secondary" for="focused2">Focused</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="dry_mouth2" name="flower_effect2" value="dry_mouth2" required>
+                    <label class="btn btn-outline-secondary" for="dry_mouth2">Dry Mouth</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="dry_eyes2" name="flower_effect2" value="dry_eyes2" required>
+                    <label class="btn btn-outline-secondary" for="dry_eyes2">Dry Eyes</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="paranoid2" name="flower_effect2" value="paranoid2" required>
+                    <label class="btn btn-outline-secondary" for="paranoid2">Paranoid</label>
         </div> <br>
              <div class="form-group mb-4">
                         <label>How long did the High last?</label>
@@ -192,7 +289,7 @@
                         <label class="btn btn-outline-secondary" for="good">It was pretty good</label>
 
                         <input class="btn-check form-check-input" type="radio" id="great" name="flower_effect3" value="great" required>
-                        <label class="btn btn-outline-secondary" for="great">That was some good shit!</label>
+                        <label class="btn btn-outline-secondary" for="great">That was some great shit!</label>
         </div><br>
              <div class="form-group mb-4">
                         <label>Overall Rating 1-5 (5 being the best):</label>
@@ -211,7 +308,7 @@
 
                         <input class="btn-check form-check-input" type="radio" id="five" name="user_rating" value="five" required>
                         <label class="btn btn-outline-secondary" for="five">5</label>
-        </div><br>
+        </div>
             <div class="mt-4 mb-4">
                         <label for="user_notes">Please enter any comments you have about this strain: (Did you like it? will you buy it again?)</label>
                         <input class="form-control" type="text" id="user_notes" name="user_notes" required>
@@ -225,4 +322,5 @@
             </div>
             {% endif %}
     </form>
+</div>
 {% endblock %}

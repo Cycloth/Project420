@@ -16,13 +16,14 @@ def index(request):
             strain_name = form.cleaned_data["strain_name"]
             strain_base = form.cleaned_data["strain_base"]
             strain_id = form.cleaned_data["strain_id"]
+            grow_info = form.cleaned_data["grow_info"]
             flower_color = form.cleaned_data["flower_color"]
             flower_color2 = form.cleaned_data["flower_color2"]
             flower_texture = form.cleaned_data["flower_texture"]
             flower_density = form.cleaned_data["flower_density"]
             flower_flavor = form.cleaned_data["flower_flavor"]
             flower_flavor2 = form.cleaned_data["flower_flavor2"]
-            flower_flavor3 = form.cleaned_data["flower_flavor3"]
+            flower_aroma = form.cleaned_data["flower_aroma"]
             flower_effect = form.cleaned_data["flower_effect"]
             flower_effect2 = form.cleaned_data["flower_effect2"]
             flower_effect3 = form.cleaned_data["flower_effect3"]
@@ -35,11 +36,11 @@ def index(request):
                                 flower_color=flower_color, flower_color2=flower_color2,
                                 flower_texture=flower_texture, flower_density=flower_density,
                                 flower_flavor=flower_flavor, flower_flavor2=flower_flavor2,
-                                flower_flavor3=flower_flavor3, flower_effect=flower_effect,
+                                flower_effect=flower_effect, grow_info=grow_info,
                                 flower_effect2=flower_effect2, flower_effect3=flower_effect3,
-                                user_rating=user_rating, user_notes=user_notes)
+                                user_rating=user_rating, user_notes=user_notes, flower_aroma=flower_aroma)
 
-            message_body = f"A new flower review was submitted. Thank you, {first_name}!! We appreciate it!"
+            message_body = f"A new review was submitted. Thank you, {first_name}!! We appreciate it!"
             email_message = EmailMessage("Form submission confirmation", message_body, to=[email])
             email_message.send()
 
