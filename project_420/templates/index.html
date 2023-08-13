@@ -15,13 +15,13 @@
     {% csrf_token %}
         <div class="mt-4 mb-4">
             <label for="first_name">First Name      / Please use an Alias if you would like to remain Anonymous </label>
-            <input class="form-control" type="text" id="first_name" name="first_name" required>
+            <input class="form-control" type="text" placeholder="Snoop, Tommy, Willie, Bob, Woody, Seth" aria-label="default input example" id="first_name" name="first_name" required>
             <label for="last_name">Last Name</label>
-            <input class="form-control" type="text" id="last_name" name="last_name" required>
+            <input class="form-control" type="text" placeholder="Dogg, Chong, Nelson, Marley, Nelson, Rogen" aria-label="default input example" id="last_name" name="last_name" required>
         </div>
         <div class="form-group mb-4">
             <label for="email">Enter an Email address:</label>
-            <input class="form-control" type="email" id="email" name="email" required>
+            <input class="form-control" type="email" placeholder="You@Youremail.com" aria-label="default input example" id="email" name="email" required>
         </div>
         <div class="form-group mb-4">
             <label for="date">Purchase Date</label>
@@ -29,11 +29,11 @@
         </div>
         <div class="mt-4 mb-4">
             <label for="strain_name">Strain Name:</label>
-            <input class="form-control" type="text" id="strain_name" name="strain_name" required>
+            <input class="form-control" type="text" placeholder="Pineapple Super Silver Haze, ManBearPig OG, Girl Scout Cookies..." aria-label="default input example" id="strain_name" name="strain_name" required>
         </div>
         <div class="mt-4 mb-4">
             <label for="grow_info">Grower Name</label>
-            <input class="form-control" type="text" id="grow_info" name="grow_info" required>
+            <input class="form-control" type="text" placeholder="Topshelf, FiftyFold, Fire Bros..." aria-label="default input example" id="grow_info" name="grow_info" required>
         </div>
         <h5 class="mt-3 mb-4">Only 1 response is allowed per section:</h5>
         <div class="form-group mb-4">
