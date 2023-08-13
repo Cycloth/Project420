@@ -1,18 +1,7 @@
-creativity, depression, anxiety
-energy, stress, euphoria
-happiness, fatigue, pain
-pain, stress, anxiety
-socializing, relaxation, energy
-relaxation, stress, euphoria
-relaxation, anxiety, pain
-stress, pain, anxiety
-pain, insomnia, relaxation
-appetite, pain, insomnia
-relaxation, happiness, stress
-stress, anxiety
-happiness, creativity, relaxation
-focus, stress
-relaxation, euphoria, happiness
+pain, depression, anxiety
+stress, fatigue, insomnia
+socializing, creativity,
+
 
 Strain Name	Strain Type	THC	CBD	Helps with
 Sour Diesel	sativa	18%	less than 1%	creativity, depression, anxiety

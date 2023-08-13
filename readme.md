@@ -1,0 +1,2 @@
+# What is this project?
+The purpose of Project 420 is to create a good database of user feedback on cannabis flower strains. We have found that most reviews have been for the dispensary and not necessarily the actual flower itself. The goal is a recommendation system, and a database of USER reviews will more accurately be able to provide reliable recommendations. So my solution is Project420 and this form to ask you, the user, if you would please tell me what you think of the weed you're smoking :)

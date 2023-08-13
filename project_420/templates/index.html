@@ -9,7 +9,8 @@
 >
 <h6>Version 1.0</h6>
 <h1 class="mt-4 mb-4">Project420 - Flower Review Form -</h1>
-<h4 class="mt-3 mb-4">Please don't abuse this form, this is for research purposes. Please only enter valid information.</h4>
+<h5 class="mt-3 mb-4">Please don't abuse this form, this is for research purposes. Please only enter valid information.</h5>
+<h6 class="mt-3 mb-4">But Please use it as many times as you want! The more, the better! Thank You!</h6>
     <form method="post">
     {% csrf_token %}
         <div class="mt-4 mb-4">
@@ -19,7 +20,7 @@
             <input class="form-control" type="text" id="last_name" name="last_name" required>
         </div>
         <div class="form-group mb-4">
-            <label for="email">Enter an Email address to subscribe to our mailing list for updates on the project! </label>
+            <label for="email">Enter an Email address:</label>
             <input class="form-control" type="email" id="email" name="email" required>
         </div>
         <div class="form-group mb-4">
@@ -31,7 +32,7 @@
             <input class="form-control" type="text" id="strain_name" name="strain_name" required>
         </div>
         <div class="mt-4 mb-4">
-            <label for="grow_info">Grower Information</label>
+            <label for="grow_info">Grower Name</label>
             <input class="form-control" type="text" id="grow_info" name="grow_info" required>
         </div>
         <h5 class="mt-3 mb-4">Only 1 response is allowed per section:</h5>
@@ -136,6 +137,9 @@
 
                 <input class="btn-check form-check-input" type="radio" id="flaky" name="flower_density" value="flaky" required>
                 <label class="btn btn-outline-secondary" for="flaky">Crumbly/Flaky</label>
+
+                <input class="btn-check form-check-input" type="radio" id="soft_fuzzy" name="flower_density" value="soft_fuzzy" required>
+                <label class="btn btn-outline-secondary" for="soft_fuzzy">Soft/Fuzzy</label>
         </div>
             <div class="form-group mb-4"><br>
                 <label>How did it smell when opened:</label>
@@ -199,6 +203,15 @@
 
                     <input class="btn-check form-check-input" type="radio" id="skunky2" name="flower_flavor2" value="skunky2" required>
                     <label class="btn btn-outline-secondary" for="skunky2">Skunky</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="sour_aftertaste" name="flower_flavor" value="sour_aftertaste" required>
+                    <label class="btn btn-outline-secondary" for="sour_aftertaste">Sour</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="cat_piss_aftertaste" name="flower_flavor" value="cat_piss_aftertaste" required>
+                    <label class="btn btn-outline-secondary" for="cat_piss_aftertaste">Cat Piss</label>
+
+                    <input class="btn-check form-check-input" type="radio" id="fertilizer_aftertaste" name="flower_flavor" value="fertilizer_aftertaste" required>
+                    <label class="btn btn-outline-secondary" for="fertilizer_aftertaste">Fertilizer</label>
         </div><br>
             <div class="form-group mb-4">
                     <label>How did you feel after? (Select 1 from each section):</label>
@@ -209,8 +222,8 @@
                     <input class="btn-check form-check-input" type="radio" id="energy" name="flower_effect" value="energy" required>
                     <label class="btn btn-outline-secondary" for="energy">Energetic</label>
 
-                    <input class="btn-check form-check-input" type="radio" id="dizzy" name="flower_effect" value="dizzy" required>
-                    <label class="btn btn-outline-secondary" for="dizzy">Dizzy</label>
+                    <input class="btn-check form-check-input" type="radio" id="euphoria" name="flower_effect" value="euphoria" required>
+                    <label class="btn btn-outline-secondary" for="euphoria">Euphoric</label>
 
                     <input class="btn-check form-check-input" type="radio" id="hungry" name="flower_effect" value="hungry" required>
                     <label class="btn btn-outline-secondary" for="hungry">Hungry</label>
@@ -246,8 +259,8 @@
                     <input class="btn-check form-check-input" type="radio" id="energy_eff2" name="flower_effect2" value="energy_eff2" required>
                     <label class="btn btn-outline-secondary" for="energy_eff2">Energetic</label>
 
-                    <input class="btn-check form-check-input" type="radio" id="dizzy_eff2" name="flower_effect2" value="dizzy_eff2" required>
-                    <label class="btn btn-outline-secondary" for="dizzy_eff2">Dizzy</label>
+                    <input class="btn-check form-check-input" type="radio" id="euphoric_eff2" name="flower_effect2" value="euphoric_eff2" required>
+                    <label class="btn btn-outline-secondary" for="euphoric_eff2">Euphoric</label>
 
                     <input class="btn-check form-check-input" type="radio" id="hungry_eff2" name="flower_effect2" value="hungry_eff2" required>
                     <label class="btn btn-outline-secondary" for="hungry_eff2">Hungry</label>

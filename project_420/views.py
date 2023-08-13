@@ -14,7 +14,7 @@ def index(request):
             email = form.cleaned_data["email"]
             date = form.cleaned_data["date"]
             strain_name = form.cleaned_data["strain_name"]
-            strain_THC = form.cleaned_data["strain_base"]
+            strain_THC = form.cleaned_data["strain_THC"]
             strain_id = form.cleaned_data["strain_id"]
             grow_info = form.cleaned_data["grow_info"]
             flower_color = form.cleaned_data["flower_color"]
